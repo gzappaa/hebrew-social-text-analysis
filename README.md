@@ -8,7 +8,7 @@ In addition to the linguistic aspect, this project serves as practical hands-on 
 
 ## Dataset
 
-The dataset was collected from Twitter on January 17th and consists of **manually selected tweets** from different topics to reflect a broad range of everyday Hebrew usage.
+The dataset was collected from Youtube comments on January 17th and consists of **manually selected comments** from different videos/topics to reflect a broad range of everyday Hebrew usage.
 
 The data was intentionally collected manually to avoid reliance on external APIs and to ensure direct interaction with the raw text data.
 
