@@ -48,5 +48,5 @@ The data was manually collected to avoid reliance on external APIs and to ensure
 1. Clone the repository:
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/gzappaa/hebrew-social-text-analysis/
 cd hebrew-social-text-analysis
