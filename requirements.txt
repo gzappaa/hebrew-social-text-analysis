@@ -2,4 +2,3 @@ pandas>=2.0
 scipy>=1.11
 google-api-python-client>=2.100
 python-bidi>=0.4
-langdetect>=1.0.9
