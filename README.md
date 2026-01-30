@@ -1,61 +1,123 @@
 # Hebrew Social Text Analysis
 
-This project focuses on analyzing Hebrew text collected from social media platforms to identify commonly used vocabulary and expressions.
+Analyze Hebrew text from YouTube comments to identify commonly used words and basic word–topic associations.
 
-It was created primarily for **personal and educational purposes**, as a way to better understand real, informal Hebrew usage online. By analyzing frequently used words and expressions, the project supports Hebrew language learning and familiarity with everyday vocabulary found on social networks.
+This project was created for personal and educational purposes, combining Hebrew language learning with hands-on Python data analysis on real, informal social media text.
 
-In addition to the linguistic aspect, this project serves as **hands-on practice with data analysis using Python**, including handling non-English, real-world text data.
+---
 
-## Dataset
+## What this project does
 
-The dataset consists of **manually selected YouTube comments** collected on January 17th. Comments were chosen from different videos/topics to reflect a broad range of everyday Hebrew usage.
+- Collects Hebrew YouTube comments from selected videos
+- Cleans and preprocesses raw text
+- Counts word frequencies (excluding stopwords)
+- Analyzes topic distribution
+- Applies Chi-Square tests to the 10 most frequent words
+- Generates a plain-text summary report
 
-The data was manually collected to avoid reliance on external APIs and to ensure direct interaction with raw text.
+---
 
-## What This Project Does
+## Scripts
 
-- Loads raw Hebrew text data
-- Performs basic preprocessing (cleaning, counting words)
-- Identifies the most frequent words
-- Builds contingency tables and applies Chi-Square tests to detect potential associations between words and topics
-- Outputs basic statistics highlighting commonly used vocabulary
+- scripts/youtube_fetch.py  
+  Collects comments using the YouTube API.  
+  Filters comments to keep only those containing Hebrew letters.  
+  Output: data/raw/comments.json
+
+- scripts/preprocess.py  
+  Cleans raw comments and removes non-Hebrew characters.  
+  Converts JSON to CSV.  
+  Output: data/processed/comments.csv
+
+- scripts/text_analysis.py  
+  Performs word counts, topic distribution and Chi-Square analysis.  
+  Output: data/processed/summary.txt
+
+---
+
+## How to run (local)
+
+1. (Optional) Set your YouTube API key:
+
+    export YT_API_KEY="YOUR_API_KEY"
+
+2. (Optional) Fetch comments:
+
+    python scripts/youtube_fetch.py
+
+3. (Optional) Preprocess data:
+
+    python scripts/preprocess.py
+
+4. Run analysis:
+
+    python scripts/text_analysis.py
+
+The summary will be saved to:
+
+    data/processed/summary.txt
+
+---
+
+## Docker
+
+The Docker image is configured to run only the analysis script by default.
+
+Build the image:
+
+    docker build -t hebrew-analysis .
+
+Run the container:
+    
+    docker run --rm hebrew-analysis
+    
+                      or 
+                      
+    docker run --rm -e YT_API_KEY=$YT_API_KEY hebrew-analysis
+
+Inside the container, the summary is located at:
+
+    /app/data/processed/summary.txt
+
+---
 
 ## Limitations
 
-- **Small dataset**: results are illustrative and may not generalize
-- **No advanced preprocessing**: stopwords, lemmatization, or token normalization are not applied
-- **Chi-Square analysis** is limited to the top 10 most common words
-- **No interactive visualization** yet (heatmaps or graphs will be added in the future)
+- Small dataset (illustrative results only)
+- No lemmatization or advanced normalization
+- Chi-Square limited to top 10 words
+- No visualizations yet
+
+---
 
 ## Stopwords
 
-The Hebrew stopwords list used in this project is based on the following repository:
+Stopwords are based on:
 
-- NNLP-IL Stop Words Hebrew  
-  https://github.com/NNLP-IL/Stop-Words-Hebrew
+NNLP-IL Stop Words Hebrew  
+https://github.com/NNLP-IL/Stop-Words-Hebrew
 
-All credit goes to the original authors.
+All credit to the original authors.
 
-## Future Improvements
+---
 
-- Expand dataset for more robust analysis
-- Implement stopwords removal and lemmatization for Hebrew
-- Add visualizations such as heatmaps for word-topic associations
-- Explore phrase/expression analysis, not just single words
-- Potential integration into Jupyter Notebook for interactive exploration
 
-## Tech Stack
+## Project structure
 
-- Python 3.13
-- Pandas
-- Collections (`Counter`)
-- SciPy (`chi2_contingency`)
-- Python-Bidi (for correct display of Hebrew in terminals)
-
-## How to Run
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/gzappaa/hebrew-social-text-analysis/
-cd hebrew-social-text-analysis
+```HEBREW-SOCIAL-TEXT-ANALYSIS/
+├── data/
+│   ├── processed/
+│   │   └── comments.csv
+│   └── raw/
+│       ├── comments.json
+│       ├── comments_raw.csv
+│       ├── stopwords.txt
+│       └── videolist.csv
+├── scripts/
+│   ├── preprocess.py
+│   ├── text_analysis.py
+│   └── youtube_fetch.py
+├── Dockerfile
+├── LICENSE
+├── README.md
+└── requirements.txt```
