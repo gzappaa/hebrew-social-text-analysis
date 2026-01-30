@@ -27,6 +27,15 @@ The data was manually collected to avoid reliance on external APIs and to ensure
 - **Chi-Square analysis** is limited to the top 10 most common words
 - **No interactive visualization** yet (heatmaps or graphs will be added in the future)
 
+## Stopwords
+
+The Hebrew stopwords list used in this project is based on the following repository:
+
+- NNLP-IL Stop Words Hebrew  
+  https://github.com/NNLP-IL/Stop-Words-Hebrew
+
+All credit goes to the original authors.
+
 ## Future Improvements
 
 - Expand dataset for more robust analysis

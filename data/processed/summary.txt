@@ -1,0 +1,144 @@
+Topic Distribution:
+
+Topic
+Gastronomy     20
+Ecology        20
+Geopolitics    20
+Humor          20
+Pop Culture    20
+Name: count, dtype: int64
+
+
+Word counts for first 5 comments:
+
+                                             Comment  Word_Count
+0  פעם ראשונה מזה תקופה שכספי המסים שלי מחזירים ת...          10
+1                  ואו ואו ואו כשאני בארץ אני רץ לשם           8
+2                           אני דווקא לא אוהב יוגורט           5
+3  איזה כיף זה מה שנקרא מטבח ואוכל ישראלי מקומות ...          28
+4                        איפה קונים יוגורט של מוטק ה           6
+
+
+10 most common words:
+
+הסוף : 4
+מדומים : 4
+מצחיק : 4
+הר : 4
+יוגורט : 3
+כתבה : 3
+לשאול : 3
+שאתם : 3
+קורה : 3
+הקטע : 3
+
+Word: 'הסוף'
+Contingency Table:
+הסוף          0  1
+Topic             
+Ecology      20  0
+Gastronomy   20  0
+Geopolitics  19  1
+Humor        19  1
+Pop Culture  19  1
+Chi2 = 2.06, p-value = 0.7244, dof = 4
+
+Word: 'מדומים'
+Contingency Table:
+מדומים        0  1
+Topic             
+Ecology      20  0
+Gastronomy   20  0
+Geopolitics  19  1
+Humor        20  0
+Pop Culture  20  0
+Chi2 = 4.04, p-value = 0.4006, dof = 4
+
+Word: 'מצחיק'
+Contingency Table:
+מצחיק         0  1
+Topic             
+Ecology      20  0
+Gastronomy   20  0
+Geopolitics  19  1
+Humor        17  3
+Pop Culture  20  0
+Chi2 = 8.85, p-value = 0.0648, dof = 4
+
+Word: 'הר'
+Contingency Table:
+הר            0  1
+Topic             
+Ecology      19  1
+Gastronomy   18  2
+Geopolitics  17  3
+Humor        17  3
+Pop Culture  17  3
+Chi2 = 1.52, p-value = 0.8240, dof = 4
+
+Word: 'יוגורט'
+Contingency Table:
+יוגורט        0  1
+Topic             
+Ecology      20  0
+Gastronomy   17  3
+Geopolitics  20  0
+Humor        20  0
+Pop Culture  20  0
+Chi2 = 12.37, p-value = 0.0148, dof = 4
+
+Word: 'כתבה'
+Contingency Table:
+כתבה          0  1
+Topic             
+Ecology      18  2
+Gastronomy   19  1
+Geopolitics  19  1
+Humor        20  0
+Pop Culture  20  0
+Chi2 = 3.65, p-value = 0.4561, dof = 4
+
+Word: 'לשאול'
+Contingency Table:
+לשאול         0  1
+Topic             
+Ecology      20  0
+Gastronomy   19  1
+Geopolitics  19  1
+Humor        20  0
+Pop Culture  19  1
+Chi2 = 2.06, p-value = 0.7244, dof = 4
+
+Word: 'שאתם'
+Contingency Table:
+שאתם          0  1
+Topic             
+Ecology      19  1
+Gastronomy   20  0
+Geopolitics  20  0
+Humor        20  0
+Pop Culture  20  0
+Chi2 = 4.04, p-value = 0.4006, dof = 4
+
+Word: 'קורה'
+Contingency Table:
+קורה          0  1
+Topic             
+Ecology      20  0
+Gastronomy   20  0
+Geopolitics  19  1
+Humor        19  1
+Pop Culture  20  0
+Chi2 = 3.06, p-value = 0.5476, dof = 4
+
+Word: 'הקטע'
+Contingency Table:
+הקטע          0  1
+Topic             
+Ecology      20  0
+Gastronomy   20  0
+Geopolitics  20  0
+Humor        18  2
+Pop Culture  19  1
+Chi2 = 5.50, p-value = 0.2399, dof = 4
+
